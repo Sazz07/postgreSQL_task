@@ -1,6 +1,5 @@
 # Bonus Section
 
----
 
 ### 1️ What is PostgreSQL?
 
