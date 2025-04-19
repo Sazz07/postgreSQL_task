@@ -1,8 +1,12 @@
 # Bonus Section
 
+---
+
 ### 1️ What is PostgreSQL?
 
 PostgreSQL একটি অত্যন্ত শক্তিশালী ওপেন-সোর্স রিলেশনাল ডাটাবেস। এটি এন্টারপ্রাইজ-লেভেল ডাটা হ্যান্ডলিং থেকে শুরু করে ছোট অ্যাপ্লিকেশন সবকিছুতে ব্যবহার করা যায়। এটি অনেক অ্যাডভান্সড ফিচার যেমন: কমপ্লেক্স কুয়েরি অপটিমাইজেশন, JSON ডাটা সাপোর্ট, টেবিল ইনহেরিটেন্স, এবং কাস্টম ফাংশন তৈরির সুবিধা দেয়।
+
+---
 
 ### 2️ What is the purpose of a database schema in PostgreSQL?
 
@@ -31,6 +35,8 @@ CREATE SCHEMA accounting;
 CREATE TABLE inventory.products (...);
 CREATE TABLE accounting.products (...);
 ```
+
+---
 
 ### 3️ Explain the Primary Key and Foreign Key concepts in PostgreSQL?
 
@@ -62,6 +68,8 @@ CREATE TABLE orders (
 );
 ```
 
+---
+
 ### 4️ What is the difference between the VARCHAR and CHAR data types?
 
 VARCHAR এবং CHAR দুটোই টেক্সট স্টোর করে, তবে তাদের স্টোরেজ পদ্ধতি আলাদা:
@@ -82,6 +90,8 @@ VARCHAR এবং CHAR দুটোই টেক্সট স্টোর কর
 - নির্দিষ্ট লেংথের ডাটার জন্য ভালো
 - কম্প্যারিজন অপারেশনে ফাস্টার
 
+---
+
 ### 5️ Explain the purpose of the WHERE clause in a SELECT statement?
 
 WHERE ক্লজ SQL এর একটি গুরুত্বপূর্ণ অংশ যা দিয়ে আমরা স্পেসিফিক কন্ডিশন অনুযায়ী ডাটা খুঁজে বের করি। যেমন:
@@ -91,6 +101,8 @@ SELECT title, published_year
 FROM books
 WHERE published_year < 2000;
 ```
+
+---
 
 ### 6️ What are the LIMIT and OFFSET clauses used for?
 
@@ -118,6 +130,8 @@ ORDER BY joined_date DESC
 LIMIT 5;
 ```
 
+---
+
 ### 7️ How can you modify data using UPDATE statements?
 
 UPDATE স্টেটমেন্ট দিয়ে টেবিলের এক্সিস্টিং ডাটা মডিফাই করা যায়। এটি খুবই শক্তিশালী কমান্ড, তাই WHERE ক্লজ দিয়ে সতর্কতার সাথে ব্যবহার করা উচিত:
@@ -135,6 +149,8 @@ SET
     stock = stock + 5
 WHERE published_year < 2000;
 ```
+
+---
 
 ### 8️ What is the significance of the JOIN operation, and how does it work in PostgreSQL?
 
@@ -158,6 +174,8 @@ LEFT JOIN orders as o ON c.id = o.customer_id
 GROUP BY c.name;
 ```
 
+---
+
 ### 9️ Explain the GROUP BY clause and its role in aggregation operations?
 
 GROUP BY ক্লজ সিমিলার ভ্যালুগুলোকে একত্রিত করে এবং তাদের উপর ক্যালকুলেশন করে। যেমন:
@@ -167,6 +185,8 @@ SELECT author, COUNT(*) as book_count, AVG(price) as avg_price
 FROM books
 GROUP BY author;
 ```
+
+---
 
 ### 10 How can you calculate aggregate functions like COUNT(), SUM(), and AVG() in PostgreSQL?
 
